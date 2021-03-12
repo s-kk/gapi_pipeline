@@ -10,4 +10,3 @@ set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -g -Wall")
 
 add_executable(G-API_Perf main.cpp ImageProcess.cpp)
 target_link_libraries(G-API_Perf ${OpenCV_LIBS})
-target_link_libraries(G-API_Perf spdlog::spdlog)

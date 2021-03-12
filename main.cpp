@@ -1,6 +1,5 @@
 #include <iostream>
 #include <opencv2/opencv.hpp>
-#include <spdlog/spdlog.h>
 
 #include "ImageProcess.h"
 
@@ -34,8 +33,6 @@ int main() {
         meter.start();
         ImageProcessWithGapi();
         meter.stop();
-        spdlog::info("Round: {0}", i);
-        spdlog::info("Time taken: {0}", meter.getTimeSec());
         time = time + meter.getTimeSec();
         meter.reset();
     }
