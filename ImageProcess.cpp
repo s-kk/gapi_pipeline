@@ -121,6 +121,7 @@ void ImageProcessWithGapi() {
 
     while (pipeline.running()) {
         if (no_show) {
+            // Fatal bug occurs here
             if (!pipeline.pull(std::move(out_vector)))
                 break;
         } else if (!pipeline.try_pull(std::move(out_vector))) {
